@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+	<!-- popup trigger -->
+	<button id="popupBtn" class="btn btn-popup center">POPUP BUTTON</button>
+
+	<!-- popup -->
+	<div id="popupCard" class="popup">
+		<div class="popup-container" id="popupCont">
+		  <div class="popup-content">
+
+		    <!-- <div class="popup-image">
+		    	<img src="images/four-season-resort-bali.jpg" alt="Traveloka four seasons resort bali"/>
+		    </div> -->
+		    <div class="popup-info">
+		    	<h1 class="title">Four Seasons Resort Bali</h1>
+		    	<span class="text-muted">Sayan Ubud Gianyar, Ubud, Indonesia, 80361</span>
+		    	<div class="rating">
+		    		<div class="star"><span>&#9733 5 STARS</span></div>
+		    		<div class="rate"><span>9/10 Very Good</span></div>
+		    	</div>
+		    	<div class="description">
+		    		<p>The highest quality service accompanying its extensive facilities will
+					make you get the ultimate holiday experience. Get precious and
+					unforgettable moment during your stay at Four Seasons Resort Bali
+					at Sayan.</p>
+		    	</div>
+		    	<div class="policy">
+		    		<button id="accordion" onclick="accordion()" class="accordion-trigger">
+		    			Hotel Policy
+		    		</button>
+		    		<div id="panel" class="accordion-content">
+		    			You must present a photo ID when checking in. Your credit
+						card is charged at the time you book. Bed type and smoking
+						preferences are not guaranteed. Your reservation is prepaid
+						and is guaranteed for late arrival.
+		    		</div>
+		    	</div>
+		    	<div class="action">
+			    	<div class="price">
+			    		Starting from<br>
+			    		<span>Rp 11.623.675</span>
+			    	</div>
+			    	<button class="btn btn-book">BOOK NOW</button>
+			    </div>
+		    </div>
+		  </div>
+		 </div>
+	</div>
+</div>
+	<script>
+	// Get the popup
+	var popup = document.getElementById('popupCard');
+	var popupCont = document.getElementById('popupCont');
+	// Get popup trigger button
+	var btn = document.getElementById("popupBtn");
+
+	// Get the <span> element that closes the popup
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal 
+	btn.onclick = function() {
+	    popup.style.display = "block";
+	}
+
+	// When the user clicks anywhere outside 
+	window.onclick = function(event) {
+	    if (event.target == popupCont) {
+	       popup.style.display = "none";
+	    }
+	}
+
+	function accordion(){
+		var acc = document.getElementById("accordion");
+		var panel = document.getElementById("panel");
+
+		panel.classList.toggle("show");
+		acc.classList.toggle("active");
+
+	
+	}
+	</script>
+</body>
+</html>
